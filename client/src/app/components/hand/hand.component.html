@@ -1,0 +1,20 @@
+<div class="relative flex w-full justify-center">
+  <!--    <app-card></app-card>-->
+  @for (card of cards; track card; let i = $index) {
+    <app-card
+      (cardPicked)="onCardClick($event)"
+      [card]="card"
+      class="absolute"
+      [angle]="getCardAngle(i)"
+      [ngStyle]="{ 'left': i * 7 / 3 + 'rem',}"></app-card>
+  }
+  <!--    <app-card [flippable]="false" [angle]="-10"></app-card>-->
+  <!--    <app-card [flippable]="false" [angle]="-5"></app-card>-->
+  <!--    <app-card [flippable]="false" [angle]="0"></app-card>-->
+  <!--    <app-card [flippable]="false" [angle]="5"></app-card>-->
+  <!--    <app-card [flippable]="false" [angle]="10"></app-card>-->
+  <!--    <app-card></app-card>-->
+  <!--    <app-card></app-card>-->
+  <!--    <app-card></app-card>-->
+  <!--    <app-card></app-card>-->
+</div>

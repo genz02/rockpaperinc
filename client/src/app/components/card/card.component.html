@@ -1,0 +1,20 @@
+@if (card) {
+
+  <div #cardElement class="card" [class.locked]="!flippable" (click)="cardPicked.emit(card)">
+
+    <div class="card-inner overflow-hidden">
+      <div class="card-front">
+      </div>
+      <div class="card-back overflow-hidden">
+        <img class="object-fit w-full h-2/3" [src]="card!.sign + '.png'" alt="">
+
+        <span>{{ [ labels[card.sign] ] }}</span>
+<!--        <span>{{ angle }}</span>-->
+
+      </div>
+    </div>
+
+
+  </div>
+
+}
